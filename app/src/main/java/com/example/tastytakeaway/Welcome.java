@@ -17,18 +17,14 @@ public class Welcome extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
-        button = findViewById(R.id.button3);
+        button = findViewById(R.id.started_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override  public void onClick(View view) {openorder(); }});
-
-
-
 
     }
 
     public void openorder(){
         Intent intent=new Intent(this, Login.class);
         startActivity(intent);}
-
 
 }

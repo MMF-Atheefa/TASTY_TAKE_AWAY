@@ -29,11 +29,11 @@ public class DBHelper extends SQLiteOpenHelper {
     public Boolean insertData(String username, String password, String repassword, String phoneNumber, String email) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name",username);
+        contentValues.put("username",username);
         contentValues.put("password",password);
-        contentValues.put("address",repassword);
-        contentValues.put("email",phoneNumber);
-        contentValues.put("mobileNumber",email);
+        contentValues.put("repassword",repassword);
+        contentValues.put("phoneNumber",phoneNumber);
+        contentValues.put("email",email);
 
         long result = MyDB.insert("users",null,contentValues);
         if(result==-1) return false;

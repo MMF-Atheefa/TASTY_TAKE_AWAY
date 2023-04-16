@@ -35,11 +35,11 @@
         app:srcCompat="@drawable/spoonlogo" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="119dp"
+        android:id="@+id/started_button"
+        android:layout_width="165dp"
         android:layout_height="55dp"
         android:backgroundTint="#CD1C59"
-        android:text="order"
+        android:text="Get Started"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
