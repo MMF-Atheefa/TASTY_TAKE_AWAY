@@ -50,7 +50,7 @@ public class Registor extends AppCompatActivity {
                         if (checkuser == false) {
                             Boolean insert = DB.insertData(usernames, passwords, repasswords, phoneNumbers, emails);
                             if (insert == true) {
-                                Toast.makeText(Registor.this, "Registation Successful", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Registor.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Registor.this, Login.class);
                                 startActivity(intent);
                             } else {
