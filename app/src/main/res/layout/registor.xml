@@ -8,7 +8,6 @@
     tools:context=".Registor">
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create New Account"
@@ -23,7 +22,7 @@
         app:layout_constraintVertical_bias="0.077" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/username"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"
@@ -42,7 +41,7 @@
         app:layout_constraintVertical_bias="0.512" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/password"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"
@@ -61,7 +60,7 @@
         app:layout_constraintVertical_bias="0.602" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/confirm_password"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"
@@ -80,7 +79,7 @@
         app:layout_constraintVertical_bias="0.689" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/phonenumber"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"
@@ -99,7 +98,7 @@
         app:layout_constraintVertical_bias="0.777" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/register_button"
         android:layout_width="109dp"
         android:layout_height="50dp"
         android:backgroundTint="#E91E63"
@@ -111,7 +110,7 @@
         app:layout_constraintVertical_bias="0.959" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/email"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"

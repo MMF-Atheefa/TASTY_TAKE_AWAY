@@ -76,7 +76,7 @@
         app:srcCompat="@drawable/profile1" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/username1"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"
@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.53" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/password1"
         android:layout_width="395dp"
         android:layout_height="52dp"
         android:background="@drawable/input_bg"
