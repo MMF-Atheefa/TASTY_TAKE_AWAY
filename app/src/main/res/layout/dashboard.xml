@@ -281,18 +281,6 @@
             android:backgroundTint="@color/pink"
             android:text="done" />
 
-        <Button
-            android:id="@+id/newmap"
-            android:layout_width="160dp"
-            android:layout_height="49dp"
-            android:layout_gravity="center"
-            android:textSize="14sp"
-            android:layout_marginLeft="50dp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/pink"
-            android:text="live location"
-            android:layout_toRightOf="@+id/donebutton" />
-
         </RelativeLayout>
 
     </LinearLayout>
