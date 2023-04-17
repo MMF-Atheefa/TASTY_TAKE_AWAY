@@ -16,7 +16,7 @@ import android.widget.Button;
 
 public class Dashboard extends AppCompatActivity implements SensorEventListener {
 
-    private Button donebutton, Map;         //link
+    private Button Map;         //link
     private Button orderburger,orderpizza,ordernoodles,orderkottu,orderrice;
 
     private SensorManager sensorManager;
@@ -47,17 +47,13 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
         orderrice.setOnClickListener(new View.OnClickListener() {
             @Override  public void onClick(View view) {openorderrice(); }});      //link
 
-        donebutton = findViewById(R.id.donebutton);
-        donebutton.setOnClickListener(new View.OnClickListener() {
-            @Override  public void onClick(View view) {opendone(); }});   // location
 
-        Map=findViewById(R.id.newmap);
+        Map=findViewById(R.id.donebutton);
         Map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Dashboard.this,Map.class);
-                startActivity(intent);
-            }
+                Intent intent=new Intent(Dashboard.this,Location.class);    //location
+                startActivity(intent);}
         });
 
 
@@ -84,11 +80,6 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
     public void openorderrice(){                                           //link
         Intent intent=new Intent(this, Rice.class);        //link
         startActivity(intent);}
-
-    public void opendone(){
-        Intent intent=new Intent(Dashboard.this,Login.class);    //location
-        startActivity(intent);}
-
 
 
     MediaPlayer mp;

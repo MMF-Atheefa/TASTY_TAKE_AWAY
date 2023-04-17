@@ -11,12 +11,6 @@
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
         android:required="true" />
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyChHwQb6Gcx5l7OaPP-87GK0EgT-X3zVLI" />
-    <meta-data
-        android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
 
     <application
         android:allowBackup="true"
@@ -28,9 +22,6 @@
         android:theme="@style/Theme.TASTYTAKEAWAY"
         tools:targetApi="31">
         <activity
-            android:name=".Map"
-            android:exported="false" />
-        <activity
             android:name=".Sensor"
             android:exported="false"
             android:screenOrientation="portrait" />
@@ -38,6 +29,13 @@
             android:name=".Location"
             android:exported="false"
             android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyChHwQb6Gcx5l7OaPP-87GK0EgT-X3zVLI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <activity
             android:name=".Noodles"
             android:exported="false"
