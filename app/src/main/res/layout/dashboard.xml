@@ -1,312 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
     android:background="@drawable/p4"
     tools:context=".Dashboard">
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="102dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Burger"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.489" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="102dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Noodles"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textColor="@color/pink"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
 
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="102dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Rice"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.871" />
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:layout_height="fill_parent"
+            android:textAlignment="center"
+            android:background="@drawable/searchofdashboard"
+            android:hint="Select Your Favourite Food"
+            android:textColorHint="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="102dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Pizza"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="400dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/offer" />
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="78dp"
-        android:layout_height="49dp"
-        android:backgroundTint="@color/purple_700"
-        android:text="ORDER3"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catagories"
+            android:textColor="@color/purple_700"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="78dp"
-        android:layout_height="49dp"
-        android:backgroundTint="@color/purple_700"
-        android:text="ORDER2"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="78dp"
-        android:layout_height="49dp"
-        android:backgroundTint="@color/purple_700"
-        android:text="ORDER1"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:id="@+id/list1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/view_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="78dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/purple_700"
-        android:text="ORDER5"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView28"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        <ImageView
+            android:id="@+id/burgerimage"
+            android:layout_width="95dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/burger1" />
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="78dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/purple_700"
-        android:text="ORDER4"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.774" />
+            <TextView
+                android:id="@+id/textburger"
+                android:layout_width="102dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Burger"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/burgerimage" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Catagories"
-        android:textColor="@color/purple_700"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.579"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+            <Button
+                android:id="@+id/orderburger"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="ORDER"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textburger" />
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="373dp"
-        android:layout_height="36dp"
-        android:background="@drawable/searchofdashboard"
-        android:hint="       Select Your Favourite Food"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.093" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/list2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/view_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dashboard"
-        android:textColor="#A13F3F"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
+            <ImageView
+                android:id="@+id/pizzaimage"
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/pizza1" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="103dp"
-        android:layout_height="49dp"
-        android:backgroundTint="#CD1C59"
-        android:text="done"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+            <TextView
+                android:id="@+id/textpizza"
+                android:layout_width="102dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Pizza"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/pizzaimage" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="407dp"
-        android:layout_height="198dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/offer" />
+            <Button
+                android:id="@+id/orderpizza"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="ORDER"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textpizza" />
+        </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView23"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582"
-        app:srcCompat="@drawable/pizza1" />
+        <RelativeLayout
+            android:id="@+id/list3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/view_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView28"
-        app:layout_constraintHorizontal_bias="0.644"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868"
-        app:srcCompat="@drawable/rice1" />
+            <ImageView
+                android:id="@+id/noodlesimage"
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/noodles1" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView10"
-        app:layout_constraintHorizontal_bias="0.61"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.774"
-        app:srcCompat="@drawable/kottu" />
+            <TextView
+                android:id="@+id/textnoodles"
+                android:layout_width="102dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Noodles"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/noodlesimage" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView27"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681"
-        app:srcCompat="@drawable/noodles1" />
+            <Button
+                android:id="@+id/ordernoodles"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="ORDER"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textnoodles" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="95dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView25"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49"
-        app:srcCompat="@drawable/burger1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/list4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/view_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/newmap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#CD1C59"
-        android:text="livelocation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.935"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961" />
+            <ImageView
+                android:id="@+id/kottuimage"
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/kottu" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="102dp"
-        android:layout_height="37dp"
-        android:gravity="center"
-        android:text="Kottu"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777" />
+            <TextView
+                android:id="@+id/textkottu"
+                android:layout_width="102dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Kottu"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/kottuimage" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/orderkottu"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="ORDER"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textkottu" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/list5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/view_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/riceimage"
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/rice1" />
+
+            <TextView
+                android:id="@+id/textrice"
+                android:layout_width="102dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Rice"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/riceimage" />
+
+            <Button
+                android:id="@+id/orderrice"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="ORDER"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/textrice" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/list6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/view_all"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/donebutton"
+            android:layout_width="103dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/pink"
+            android:text="done" />
+
+        <Button
+            android:id="@+id/newmap"
+            android:layout_width="160dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:layout_marginLeft="50dp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/pink"
+            android:text="live location"
+            android:layout_toRightOf="@+id/donebutton" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

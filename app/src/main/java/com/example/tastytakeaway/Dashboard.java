@@ -16,12 +16,8 @@ import android.widget.Button;
 
 public class Dashboard extends AppCompatActivity implements SensorEventListener {
 
-    private Button button;         //link
-    private Button button1;
-    private Button button2;
-    private Button button3;
-    private Button button5;
-    private Button button6;         // location
+    private Button donebutton, newmap;         //link
+    private Button orderburger,orderpizza,ordernoodles,orderkottu,orderrice;
     private Button Map;
 
     private SensorManager sensorManager;
@@ -32,28 +28,28 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
 
-        button = findViewById(R.id.button8);                                    //link
-        button.setOnClickListener(new View.OnClickListener() {                   //link
-            @Override  public void onClick(View view) {openorder1(); }});        //link
+        orderburger = findViewById(R.id.orderburger);                                    //link
+        orderburger.setOnClickListener(new View.OnClickListener() {                   //link
+            @Override  public void onClick(View view) {openorderburger(); }});        //link
 
-        button = findViewById(R.id.button6);                                    //link
-        button.setOnClickListener(new View.OnClickListener() {                   //link
-            @Override  public void onClick(View view) {openorder2(); }});
+        orderpizza = findViewById(R.id.orderpizza);                                    //link
+        orderpizza.setOnClickListener(new View.OnClickListener() {                   //link
+            @Override  public void onClick(View view) {openorderpizza(); }});
 
-        button = findViewById(R.id.button12);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override  public void onClick(View view) {openorder3(); }});      //link
+        ordernoodles = findViewById(R.id.ordernoodles);
+        ordernoodles.setOnClickListener(new View.OnClickListener() {
+            @Override  public void onClick(View view) {openordernoodles(); }});      //link
 
-        button = findViewById(R.id.button14);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override  public void onClick(View view) {openorder4(); }});       //link
+        orderkottu = findViewById(R.id.orderkottu);
+        orderkottu.setOnClickListener(new View.OnClickListener() {
+            @Override  public void onClick(View view) {openorderkottu(); }});       //link
 
-        button = findViewById(R.id.button15);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override  public void onClick(View view) {openorder5(); }});      //link
+        orderrice = findViewById(R.id.orderrice);
+        orderrice.setOnClickListener(new View.OnClickListener() {
+            @Override  public void onClick(View view) {openorderrice(); }});      //link
 
-        button = findViewById(R.id.button2);
-        button.setOnClickListener(new View.OnClickListener() {
+        donebutton = findViewById(R.id.donebutton);
+        donebutton.setOnClickListener(new View.OnClickListener() {
             @Override  public void onClick(View view) {opendone(); }});   // location
 
 
@@ -73,24 +69,23 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
 
     }
-    public void openorder1(){                                           //link
+    public void openorderburger(){                                           //link
         Intent intent=new Intent(this, Burger.class);        //link
         startActivity(intent);}                                          //link
 
-    public void openorder2(){                                           //link
+    public void openorderpizza(){                                           //link
         Intent intent=new Intent(this, Pizza.class);        //link
         startActivity(intent);}
 
-
-    public void openorder3(){                                           //link
+    public void openordernoodles(){                                           //link
         Intent intent=new Intent(this, Noodles.class);        //link
         startActivity(intent);}
 
-    public void openorder4(){                                           //link
+    public void openorderkottu(){                                           //link
         Intent intent=new Intent(this, Kottu.class);        //link
         startActivity(intent);}
 
-    public void openorder5(){                                           //link
+    public void openorderrice(){                                           //link
         Intent intent=new Intent(this, Rice.class);        //link
         startActivity(intent);}
 
