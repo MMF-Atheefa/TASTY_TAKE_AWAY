@@ -13,7 +13,7 @@ import android.widget.VideoView;
 
 public class Registor extends AppCompatActivity {
     Button registerButton;
-    EditText username, password , repassword , phoneNumber, email;
+    EditText username, email , phoneNumber, password, repassword ;
     DBHelper DB;
 
     @Override
@@ -21,10 +21,10 @@ public class Registor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registor);
         username = (EditText) findViewById(R.id.username);
+        email = (EditText) findViewById(R.id.email);
+        phoneNumber = (EditText) findViewById(R.id.phonenumber);
         password = (EditText) findViewById(R.id.password);
         repassword = (EditText) findViewById(R.id.confirm_password);
-        phoneNumber = (EditText) findViewById(R.id.phonenumber);
-        email = (EditText) findViewById(R.id.email);
         registerButton = findViewById(R.id.register_button);
         DB = new DBHelper(this);
 
@@ -37,18 +37,18 @@ public class Registor extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String usernames = username.getText().toString();
+                String emails = email.getText().toString();
+                String phoneNumbers = phoneNumber.getText().toString();
                 String passwords = password.getText().toString();
                 String repasswords = repassword.getText().toString();
-                String phoneNumbers = phoneNumber.getText().toString();
-                String emails = email.getText().toString();
 
-                if (usernames.equals("") || passwords.equals("") || repasswords.equals("") || phoneNumbers.equals("") || emails.equals(""))
+                if (usernames.equals("") || emails.equals("") || phoneNumbers.equals("") || passwords.equals("") || repasswords.equals(""))
                     Toast.makeText(Registor.this, "Enter All Fields", Toast.LENGTH_SHORT).show();
                 else {
                     if (passwords.equals(repasswords)) {
                         Boolean checkuser = DB.checkusername(usernames);
                         if (checkuser == false) {
-                            Boolean insert = DB.insertData(usernames, passwords, repasswords, phoneNumbers, emails);
+                            Boolean insert = DB.insertData(usernames, emails,phoneNumbers, passwords, repasswords);
                             if (insert == true) {
                                 Toast.makeText(Registor.this, "Registration Successful", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Registor.this, Login.class);
