@@ -16,9 +16,8 @@ import android.widget.Button;
 
 public class Dashboard extends AppCompatActivity implements SensorEventListener {
 
-    private Button donebutton, newmap;         //link
+    private Button donebutton, Map;         //link
     private Button orderburger,orderpizza,ordernoodles,orderkottu,orderrice;
-    private Button Map;
 
     private SensorManager sensorManager;
     private Sensor sensor;
@@ -52,7 +51,6 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
         donebutton.setOnClickListener(new View.OnClickListener() {
             @Override  public void onClick(View view) {opendone(); }});   // location
 
-
         Map=findViewById(R.id.newmap);
         Map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,8 +59,6 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
                 startActivity(intent);
             }
         });
-
-
 
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -90,7 +86,7 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
         startActivity(intent);}
 
     public void opendone(){
-        Intent intent=new Intent(Dashboard.this,Location.class);    //location
+        Intent intent=new Intent(Dashboard.this,Login.class);    //location
         startActivity(intent);}
 
 
@@ -114,7 +110,6 @@ public class Dashboard extends AppCompatActivity implements SensorEventListener 
     protected void onResume () {
         super.onResume();
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
-
     }
 
     @Override
