@@ -2,6 +2,8 @@ package com.example.tastytakeaway;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -60,5 +62,26 @@ public class Login extends AppCompatActivity {
                 Toast.makeText(Login.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    //Back Press Exit
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Login.this);
+        alertDialog.setTitle("Confirm Exit");
+        alertDialog.setMessage(" \"Are you sure you want to exit?\"");
+        alertDialog.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finishAffinity();
+            }
+        });
+        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 }

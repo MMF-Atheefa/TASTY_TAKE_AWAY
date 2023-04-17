@@ -9,9 +9,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 
 import android.widget.TextView;
-
 public class Sensor extends AppCompatActivity implements SensorEventListener {
-
 
     private TextView textView;
     private SensorManager sensorManager;
@@ -41,7 +39,6 @@ public class Sensor extends AppCompatActivity implements SensorEventListener {
         }}
 
 
-
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         textView.setText(sensorEvent.values [0]+"°C");
@@ -49,7 +46,6 @@ public class Sensor extends AppCompatActivity implements SensorEventListener {
 
     @Override
     public void onAccuracyChanged(android.hardware.Sensor sensor, int i) {
-
 
     }
 
@@ -62,7 +58,6 @@ public class Sensor extends AppCompatActivity implements SensorEventListener {
         }
 
     }
-
     @Override
     protected void onPause() {
         super.onPause();
@@ -70,7 +65,5 @@ public class Sensor extends AppCompatActivity implements SensorEventListener {
             sensorManager.unregisterListener(this );
         }
     }
-
-
 
 }

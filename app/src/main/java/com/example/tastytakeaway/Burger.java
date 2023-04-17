@@ -15,7 +15,6 @@ public class Burger extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor sensor;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +22,6 @@ public class Burger extends AppCompatActivity implements SensorEventListener {
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-
     }
 
     MediaPlayer mp;
@@ -40,12 +38,10 @@ public class Burger extends AppCompatActivity implements SensorEventListener {
     public void onAccuracyChanged (Sensor sensor,int accuracy){
 
     }
-
     @Override
     protected void onResume () {
         super.onResume();
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
-
     }
 
     @Override
