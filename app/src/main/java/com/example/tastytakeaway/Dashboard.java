@@ -16,10 +16,10 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class Dashboard extends AppCompatActivity implements SensorEventListener {
+public class Dashboard extends AppCompatActivity implements SensorEventListener  {
 
     private Button Map;         //link
-    private Button orderburger,orderpizza,ordernoodles,orderkottu,orderrice;
+     Button orderburger,orderpizza,ordernoodles,orderkottu,orderrice;
 
     private SensorManager sensorManager;
     private Sensor sensor;

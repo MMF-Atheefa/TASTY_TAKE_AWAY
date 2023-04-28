@@ -271,15 +271,16 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
-        <Button
-            android:id="@+id/donebutton"
-            android:layout_width="103dp"
-            android:layout_height="49dp"
-            android:layout_gravity="center"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/pink"
-            android:text="done" />
+
+            <Button
+                android:id="@+id/donebutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/pink"
+                android:text="Track Your Order"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

@@ -79,7 +79,7 @@
         android:layout_width="125dp"
         android:layout_height="123dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -148,7 +148,7 @@
 
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/button3"
         android:layout_width="72dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/purple_700"

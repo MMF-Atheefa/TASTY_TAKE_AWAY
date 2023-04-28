@@ -2,53 +2,50 @@ package com.example.tastytakeaway;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
-import android.media.MediaPlayer;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public class Burger extends AppCompatActivity implements SensorEventListener {
+public class Burger extends AppCompatActivity implements View.OnClickListener {
+    Button button,button1,button2;
 
-    private SensorManager sensorManager;
-    private Sensor sensor;
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.burger);
+        button = findViewById(R.id.button3);
+        button1 = findViewById(R.id.button17);
+        button2 = findViewById(R.id.button19);
 
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+        button.setOnClickListener(this);
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+
     }
 
-    MediaPlayer mp;
-    boolean isRunning = false;
     @Override
-    public void onSensorChanged(SensorEvent event) {
-        if (event.values[0] > 51 && isRunning == false) {
-            isRunning = true;
-            mp = new MediaPlayer();
-            mp = MediaPlayer.create(this, R.raw.hotelaudios92077651);
-            mp.start();
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button3:
+                button.setText("BUY");
+                Intent intent=new Intent(this, Payment.class);
+                startActivity(intent);
+                break;
+            case R.id.button17:
+                button.setText ("Buy");
+                Intent intent1=new Intent(this, Payment.class);
+                startActivity(intent1);
+                break;
+            case R.id.button19:
+                button.setText("Buy.");
+                Intent intent2=new Intent(this, Payment.class);
+                startActivity(intent2);
+                break;
+
         }
-    } @Override
-    public void onAccuracyChanged (Sensor sensor,int accuracy){
 
-    }
-    @Override
-    protected void onResume () {
-        super.onResume();
-        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
-    }
-
-    @Override
-    protected void onPause () {
-        super.onPause();
-        sensorManager.unregisterListener(this);
     }
 }
-
-
